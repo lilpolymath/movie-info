@@ -8,7 +8,7 @@ $(document).ready(() => {
 
 function getMovies(searchText) {
   axios
-    .get("http://www.omdbapi.com?s=" + searchText + "&apikey=6d6a2625")
+    .get("https://www.omdbapi.com?s=" + searchText + "&apikey=6d6a2625")
     .then(response => {
       console.log(response);
       let movies = response.data.Search;
@@ -29,8 +29,7 @@ function getMovies(searchText) {
       $("#movies").html(output);
     })
     .catch(err => {
-      console.log(err);
-      alert("The App needs internet to work.");
+      Alert(err);
     });
 }
 
@@ -44,7 +43,7 @@ function movieSelected(id) {
 function getMovie() {
   let movieID = sessionStorage.getItem("movieId");
   axios
-    .get("http://www.omdbapi.com?i=" + movieID + "&apikey=6d6a2625")
+    .get("https://www.omdbapi.com?i=" + movieID + "&apikey=6d6a2625")
     .then(response => {
       let movie = response.data;
       let output = `<div class="row">
