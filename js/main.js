@@ -29,7 +29,7 @@ function getMovies(searchText) {
       $("#movies").html(output);
     })
     .catch(err => {
-      Alert(err);
+      Alert("Testing something.");
     });
 }
 
