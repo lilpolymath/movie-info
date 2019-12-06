@@ -29,7 +29,7 @@ function getMovies(searchText) {
       $("#movies").html(output);
     })
     .catch(err => {
-      Alert("Testing something.");
+      console.log("The first error na" + err);
     });
 }
 
@@ -91,6 +91,6 @@ function getMovie() {
       $("#movie").html(output);
     })
     .catch(err => {
-      console.log(err);
+      console.log("The second error na" + err);
     });
 }
